@@ -2,19 +2,19 @@ import React from "react";
 import s from './Tablo.module.css'
 
 type ButtonPropsType = {
-    incrementNumber: (inner: number) => void
-    resetNumber: (inner: number) => void
+    incrementNumber: () => void
+    resetNumber: () => void
     incrementDigit: number
     
 }
 export const Tablo = (props: ButtonPropsType) => {
     
     const onClickButtonHandler = () => {
-        props.incrementNumber(props.incrementDigit) 
+        props.incrementNumber() 
     }
 
     const onClickResetHandler = () => {
-        props.resetNumber(0)
+        props.resetNumber()
     }
 
     return (
@@ -36,4 +36,8 @@ export const Tablo = (props: ButtonPropsType) => {
         </div>
     )
 }
+
+
+
+
 
