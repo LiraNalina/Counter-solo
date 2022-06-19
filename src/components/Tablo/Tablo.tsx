@@ -36,4 +36,3 @@ export const Tablo = (props: ButtonPropsType) => {
         </div>
     )
 }
-
