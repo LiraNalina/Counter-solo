@@ -1,38 +1,47 @@
 .tablo {
+    display: grid;
+    place-content: center;
+font-size: 30px;
     margin-top: 20px;
-    margin-left: 80px;
-    width: 150px;
+    margin-left: 30px;
+    width: 160px;
     height: 80px;
-    display: block;
-    background-color: rgb(194, 251, 232);
-    border: 1px solid green;
+    background-color: rgb(22, 85, 65);
+    border: 2px solid green;
     border-radius: 10px;
-    color: green;
+    color: #d4e7de;
 }
 
 .buttons {
-    width: 150px;
-    height: 90px;
-    border: 1px solid green;
+
+    display: block;
+    width: 160px;
+    height: 70px;
+    border: 2px solid green;
     border-radius: 10px;
-    margin-top: 10px;
-    margin-left: 80px;
+    margin-top: 15px;
+    margin-left: 30px;
 }
 
 .inc {
-    margin-top: 30px;
-    /* margin-left: 10px; */
+    justify-content: center;
+    font-size: 20px;
+    display: inline-flex;
+    margin-top: 20px;
     background-color: aquamarine;
-    width: 50px;
+    width: 60px;
     height: 30px;
     border: 1px solid green;
     border-radius: 10px;
 }
 
 .reset {
+    justify-content: center;
+    font-size: 20px;
+    display: inline-flex;
     margin-left: 10px;
     background-color: aquamarine;
-    width: 50px;
+    width: 60px;
     height: 30px;
     border: 1px solid green;
     border-radius: 10px;
@@ -40,4 +49,12 @@
     :disabled{
     /* pointer-events: none; */
     background-color: white;
+    }
+
+    .digit {
+
+        color: white;
+    }
+    .wrongDigit {
+        color: red;
     }

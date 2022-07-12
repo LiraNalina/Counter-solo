@@ -5,12 +5,12 @@ type ButtonPropsType = {
     incrementNumber: () => void
     resetNumber: () => void
     incrementDigit: number
-    
+
 }
 export const Tablo = (props: ButtonPropsType) => {
-    
+
     const onClickButtonHandler = () => {
-        props.incrementNumber() 
+        props.incrementNumber()
     }
 
     const onClickResetHandler = () => {
@@ -19,19 +19,23 @@ export const Tablo = (props: ButtonPropsType) => {
 
     return (
         <div>
-            <div className={s.tablo}>{props.incrementDigit}</div>
+
+            <div className={s.tablo}><span className={props.incrementDigit < 5 ? s.digit : s.wrongDigit}>{props.incrementDigit}</span></div>
+
             <div className={s.buttons}>
 
-                <button                   
+                <button
                     className={s.inc}
                     onClick={onClickButtonHandler}
                     disabled={props.incrementDigit === 5}
-                    >inc</button>
+                >inc
+                </button>
 
                 <button
                     disabled={props.incrementDigit < 5}
                     className={s.reset}
-                    onClick={onClickResetHandler}>reset</button>
+                    onClick={onClickResetHandler}>reset
+                </button>
             </div>
         </div>
     )
